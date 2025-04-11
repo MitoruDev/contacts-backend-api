@@ -38,7 +38,7 @@ const errorHandler = (err, req, res, next) => {
       });
       break;
     default:
-      console.error("No error, just a warning");
+      console.error("No error, All good!");
       break;
   }
 };

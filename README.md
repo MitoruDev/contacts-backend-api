@@ -1,19 +1,34 @@
-# Backend API with Node.js & Express
+# 📇 Contact Manager Backend API
 
-A lightweight Contact Manager built with Node.js and Express.js that demonstrates basic routing and HTTP methods.
+A lightweight backend system for managing contacts with user authentication, built using **Node.js**, **Express.js**, **MongoDB**, and **Mongoose**.
 
-## Features
+---
 
-- GET endpoint for contacts
+## 🚀 Features
 
-## Technologies Used
+- User registration & login
+- Authentication using JWT
+- Protected routes for contacts
+- Full CRUD functionality for contacts
+- Clean structure with User & Contact controllers
 
-- Node.js
-- Express.js
+---
 
-## Installation
+## 🛠️ Technologies
 
-1. Clone the repository
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs)
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/mitorudev/contacts-backend-api.git
@@ -29,7 +44,9 @@ npm install
 3. Create .env for config (PORT=XXXX)
 
 ```pwsh
-New-Item .env
+PORT=5001
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 ```
 
 4. Start the server
@@ -40,14 +57,40 @@ npm run dev
 
 The server will run on `http://localhost:8080`
 
-## API Endpoints
+## 📌 API Endpoints
 
-### GET /api/contacts
+### 🔐 User Routes (`/api/users`)
 
-Get all contacts
+| Method | Endpoint    | Description                  |
+| ------ | ----------- | ---------------------------- |
+| POST   | `/register` | Register a new user          |
+| POST   | `/login`    | Log in an existing user      |
+| GET    | `/current`  | Get currently logged-in user |
 
-## Next Steps
+---
 
-Future improvements could include:
+### 📇 Contact Routes (`/api/contacts`)
 
--
+| Method | Endpoint | Description                  |
+| ------ | -------- | ---------------------------- |
+| GET    | `/`      | Get all contacts             |
+| POST   | `/`      | Create a new contact         |
+| GET    | `/:id`   | Get a specific contact by ID |
+| PUT    | `/:id`   | Update a contact by ID       |
+| DELETE | `/:id`   | Delete a contact by ID       |
+
+---
+
+## ✅ Next Steps
+
+Planned or suggested improvements:
+
+- Input validation with Joi or express-validator
+- Role-based access control
+- Profile picture upload
+- Pagination and filtering
+- Password reset via email
+
+---
+
+Feel free to contribute or open issues for bugs and improvements!

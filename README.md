@@ -4,6 +4,11 @@ A lightweight backend system for managing contacts with user authentication, bui
 
 ---
 
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
+![Express](https://img.shields.io/badge/Express.js-Framework-blue)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 ## 🚀 Features
 
 - User registration & login
